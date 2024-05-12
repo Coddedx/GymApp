@@ -1,0 +1,23 @@
+﻿@using GymApp.Web.Models
+
+@model About
+
+<div class="row">
+    <div class="col-12">
+		<div class="card">
+			@if(!string.IsNullOrEmpty( Model.ImageUrl)){
+				<img src="@Model.ImageUrl" class="card-img-top">
+
+			}
+			<div class="card-body">
+				<h5 class="card-title">@Model.Title</h5>
+				<p class="card-text">
+					@Model.Description
+				</p>
+				<p class="card-text">
+					<small class="text-muted">Son Güncellenme Tarihi: @Model.UpdatedDate</small>
+				</p>
+			</div>
+		</div>
+    </div>
+</div>

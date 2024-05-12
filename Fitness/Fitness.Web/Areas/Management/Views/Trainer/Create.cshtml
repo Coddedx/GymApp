@@ -1,0 +1,43 @@
+﻿@using GymApp.Web.Models
+@model Trainer
+
+<div class="row">
+    <div class="col-12">
+		<div class="card border-top border-0 border-4 border-dark">
+			<div class="card-body p-5">
+				<div class="card-title text-center">
+					<i class="bx bxs-user-circle text-dark font-50"></i>
+					<h5 class="mb-5 mt-2 text-dark">User Login</h5>
+				</div>
+				<hr>
+				<form class="row g-3" method="post">
+					<div class="col-12">
+						<label asp-for="FullName" class="form-label">Adı Soyadı</label>
+						<input type="text" class="form-control border-start-0" asp-for="FullName" placeholder="Adı soyadı">
+						<span class="text-danger" asp-validation-for="FullName"></span>
+					</div>
+					<div class="col-12">
+						<label asp-for="Email" class="form-label">Email</label>
+						<input type="text" class="form-control border-start-0" asp-for="Email" placeholder="Email">
+						<span class="text-danger" asp-validation-for="Email"></span>
+					</div>
+					<div class="col-12">
+						<label asp-for="Phone" class="form-label">Phone</label>
+						<input type="text" class="form-control border-start-0" asp-for="Phone" placeholder="Phone">
+						<span class="text-danger" asp-validation-for="Phone"></span>
+					</div>
+					
+					<div class="col-12">
+						<div class="d-grid">
+							<button type="submit" class="btn btn-dark btn-lg px-5"><i class="bx bxs-lock-open"></i>Kaydet</button>
+						</div>
+					</div>
+					<hr>
+					
+					
+				</form>
+			</div>
+		</div>
+    </div>
+
+</div>

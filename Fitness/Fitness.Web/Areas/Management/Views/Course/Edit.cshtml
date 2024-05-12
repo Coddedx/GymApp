@@ -1,0 +1,72 @@
+﻿@using GymApp.Web.Models
+@model Course
+
+<div class="row">
+	<div class="col-12">
+		<div class="card border-top border-0 border-4 border-dark">
+			<div class="card-body p-5">
+				<div class="card-TrainerId text-center">
+					<i class="bx bxs-user-circle text-dark font-50"></i>
+					<h5 class="mb-5 mt-2 text-dark">Kurs Düzenle</h5>
+				</div>
+				<hr>
+				<form class="row g-3" method="post">
+					<input type="hidden" asp-for="Id" />
+					<div class="col-12">
+						<label asp-for="TrainerId" class="form-label">Eğitmen</label>
+						<div class="input-group input-group-lg">
+							<select asp-for="TrainerId" asp-items="@ViewBag.TrainerId" class="form-control"></select>
+							<span class="text-danger" asp-validation-for="TrainerId"></span>
+						</div>
+					</div>
+					<div class="col-12">
+						<label asp-for="CategoryId" class="form-label">Kategori</label>
+						<div class="input-group input-group-lg">
+							<select asp-for="CategoryId" asp-items="@ViewBag.CategoryId" class="form-control"></select>
+							<span class="text-danger" asp-validation-for="CategoryId"></span>
+						</div>
+					</div>
+					<div class="col-12">
+						<label asp-for="StartTime" class="form-label">Başlangıç</label>
+						<div class="input-group input-group-lg">
+							<input type="datetime-local" class="form-control border-start-0" asp-for="StartTime" placeholder="Başlangıç">
+
+							<span class="text-danger" asp-validation-for="StartTime"></span>
+						</div>
+					</div>
+					<div class="col-12">
+						<label asp-for="EndTime" class="form-label">Bitiş</label>
+						<div class="input-group input-group-lg">
+							<input type="datetime-local" class="form-control border-start-0" asp-for="EndTime" placeholder="Bitiş">
+
+							<span class="text-danger" asp-validation-for="EndTime"></span>
+						</div>
+					</div>
+					<div class="col-12">
+						<label asp-for="UserCount" class="form-label">Üye Sayısı</label>
+						<div class="input-group input-group-lg">
+							<input type="text" class="form-control border-start-0" asp-for="UserCount" placeholder="Kapasite">
+
+							<span class="text-danger" asp-validation-for="UserCount"></span>
+
+						</div>
+					</div>
+					<div class="col-12">
+						<label asp-for="Status" class="form-label">Durumu</label>
+						<select class="form-select mb-3" asp-for="Status">
+							<option value="true">Aktif</option>
+							<option value="false">Pasif</option>
+						</select>
+					</div>
+
+					<div class="col-12">
+						<div class="d-grid">
+							<button type="submit" class="btn btn-dark btn-lg px-5"><i class="bx bxs-lock-open"></i>Kaydet</button>
+						</div>
+					</div>
+					<hr>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

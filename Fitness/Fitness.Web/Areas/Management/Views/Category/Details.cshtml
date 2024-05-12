@@ -1,0 +1,51 @@
+﻿@using GymApp.Web.Models
+@model Category
+
+<h1>Kategori Detayı </h1>
+
+<div class="card radius-15">
+	<div class="card-body">
+		<h5 class="card-title">@Model.Title</h5>
+		<p class="text-justify">@Model.Description</p> 
+		<p>Oluşturma Tarihi: @Model.CreatedDate</p> 
+		<p>Düzenlenme Tarihi: @Model.UpdatedDate</p> 
+		<hr />
+
+		<h2>Kategorinin Kursları</h2>
+		<div class="table-responsive">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th scope="col">Başlangıç</th>
+						<th scope="col">Bitiş</th>
+						<th scope="col">Üye Sayısı</th>
+						<th scope="col">Durumu</th>
+						<th scope="col">#</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var item in Model.Courses)
+					{
+						
+						<tr>
+							<td>@item.StartTime</td>
+							<td>@item.EndTime</td>							
+							<td>@item.UserCount</td>
+							<td>
+								@if (item.Status)
+								{
+									<span>Aktif</span>
+								}
+								else
+								{
+									<span>Pasif</span>
+								}
+							</td>
+							
+						</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

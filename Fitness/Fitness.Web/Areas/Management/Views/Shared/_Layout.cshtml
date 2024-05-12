@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<partial name="_Head" />
+</head>
+
+<body>
+	<!-- wrapper -->
+	<div class="wrapper">
+		<partial name="_SideBar" />
+		<partial name="_Header" />
+		<!--page-wrapper-->
+		<div class="page-wrapper">
+			<!--page-content-wrapper-->
+			<div class="page-content-wrapper">
+				<div class="page-content">
+					@RenderBody()
+				</div>
+			</div>
+			<!--end page-content-wrapper-->
+		</div>
+		<!--end page-wrapper-->
+		<!--start overlay-->
+		<div class="overlay toggle-btn-mobile"></div>
+		<!--end overlay-->
+		<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
+		<!--End Back To Top Button-->
+		<partial name="_Footer" />
+	</div>
+	<!-- end wrapper -->
+	<partial name="_Switcher" />
+	<partial name="_Script" />
+</body>
+
+</html>

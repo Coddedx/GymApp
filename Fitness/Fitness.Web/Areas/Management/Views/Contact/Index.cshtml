@@ -1,0 +1,73 @@
+﻿@using GymApp.Web.Models
+@model IEnumerable<Contact>
+
+
+	<a class="btn- btn-success"  asp-area="Management" asp-controller="Contact" asp-action="Index"></a>
+<div class="card radius-15">
+	<div class="card-body">
+		<div class="card-title">
+			<h4 class="mb-0">İletişim</h4>
+		</div>
+		<hr>
+		<div class="table-responsive">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">Resim Url</th>
+						<th scope="col">Başlık</th>
+						<th scope="col">Açıklama</th>
+						<th scope="col">Instagram Url</th>
+						<th scope="col">Linkedin Url</th>
+						<th scope="col">X Url</th>
+						<th scope="col">#</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					@foreach(var item in Model){
+						<a class="btn btn-primary"
+					   asp-area="Management"
+					   asp-controller="Contact"
+					   asp-action="Create"
+					   asp-route-id="@item.Id">Ekle
+						</a>
+						<tr>
+							<td>@item.ImageUrl</td>
+							<td>@item.Title</td>
+							<td>@item.Description</td>
+							<td>@item.InstagramRedirectUrl</td>
+							<td>@item.LinkedinRedirectUrl</td>
+							<td>@item.XRedirectUrl</td>
+							<td>
+								@if(@item.Status){
+									<span>Aktif</span>
+								}
+								else{
+									<span>Pasif</span>
+								}
+								</td>
+							<td>
+
+								<a class="btn btn-primary" 
+								asp-area="Management" 
+								asp-controller="Contact" 
+								asp-action="Edit" 
+								asp-route-id="@item.Id">Düzenle
+								</a>
+
+								<a class="btn btn-danger"
+								asp-area="Management"
+							   asp-controller="Contact"
+							   asp-action="Delete"
+							   asp-route-id="@item.Id">Sil
+								</a>
+
+							</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,85 @@
+﻿@using GymApp.Web.Models
+@model IEnumerable<Course>
+
+<a class="btn btn-success" asp-area="Management"
+   asp-controller="Course"
+   asp-action="Create">Ekle</a>
+
+<div class="card radius-15">
+    <div class="card-body">
+        <div class="card-title">
+            <h4 class="mb-0">Kurslar</h4>
+        </div>
+        <hr>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+
+                        <th scope="col">Kategori</th>
+                        <th scope="col">Eğitmen</th>
+                        <th scope="col">Başlangıç</th>
+                        <th scope="col">Bitiş</th>
+                        <th scope="col">Üye Sayısı</th>
+                        <th scope="col">Durumu</th>
+                    
+                        <th scope="col">#</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td>@item.Category.Title</td>
+                            <td>
+                               @item.Trainer.FullName
+                            </td>
+                            <td>
+                                @item.StartTime
+                            </td>
+                            <td>
+                                @item.EndTime
+                            </td>
+                            <td>
+                                @item.UserCount
+                            </td>
+                            <td>
+                                @if (item.Status)
+                                {
+                                    <span>Aktif</span>
+                                }
+                                else
+                                {
+                                    <span>Pasif</span>
+                                }
+                            </td>
+                            
+                            <td>
+
+
+
+                                <a class="btn btn-primary" asp-area="Management"
+                                   asp-controller="Course" asp-action="Details"
+                                   asp-route-id="@item.Id">Detay</a>
+
+                                <a class="btn btn-primary" asp-area="Management"
+                                   asp-controller="Course" asp-action="Edit"
+                                   asp-route-id="@item.Id">Düzenle</a>
+
+                                <a class="btn btn-danger"
+                                   asp-area="Management"
+                                   asp-controller="Course"
+                                   asp-action="Delete"
+                                   asp-route-id="@item.Id">Sil</a>
+
+                                @*  <a class="btn btn-danger"
+                            href="Management/Trainer/Delete/@item.Id">Sil</a> *@
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

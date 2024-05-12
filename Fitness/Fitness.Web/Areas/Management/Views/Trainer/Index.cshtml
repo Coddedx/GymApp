@@ -1,0 +1,69 @@
+﻿@using GymApp.Web.Models
+@model IEnumerable<Trainer>
+
+	<a class="btn- btn-success"  asp-area="Management" asp-controller="Trainer" asp-action="Create">Ekle</a>
+<div class="card radius-15">
+	<div class="card-body">
+		<div class="card-title">
+			<h4 class="mb-0">Eğitmenler</h4>
+		</div>
+		<hr>
+		<div class="table-responsive">
+			<table class="table table-bordered">
+				
+				<thead>
+					<tr>
+						<th scope="col">Adı Soyadı</th>
+						<th scope="col">Email</th>
+						<th scope="col">Telefon</th>
+						<th scope="col">Durumu</th>
+						<th scope="col">#</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					@foreach(var item in Model){
+					
+						<tr>
+							<td>@item.FullName</td>
+							<td>@item.Email</td>
+							<td>@item.Phone</td>
+							<td>
+								@if(@item.Status){
+									<span>Aktif</span>
+								}
+								else{
+									<span>Pasif</span>
+								}
+								</td>
+							<td>
+
+								<a class="btn btn-primary"
+							   asp-area="Management"
+							   asp-controller="Trainer"
+							   asp-action="Details"
+							   asp-route-id="@item.Id">Detay
+								</a>
+
+								<a class="btn btn-primary" 
+								asp-area="Management" 
+								asp-controller="Trainer" 
+								asp-action="Edit" 
+								asp-route-id="@item.Id">Düzenle
+								</a>
+
+								<a class="btn btn-danger"
+								asp-area="Management"
+							   asp-controller="Trainer"
+							   asp-action="Delete"
+							   asp-route-id="@item.Id">Sil
+								</a>
+
+							</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

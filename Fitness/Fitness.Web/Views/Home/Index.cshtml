@@ -1,0 +1,74 @@
+﻿@using GymApp.Web.Models
+@model MainPage
+<!-- Hero Section Begin -->
+<section class="hero">
+    <div class="hero__sliders owl-carousel">
+@*        <div class="hero__items set-bg" data-setbg="@Model.SliderImageUrl1">
+*@            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="hero__text">
+@*                            <span>@Model.SliderTitle1</span>
+                            <h2>@Model.SliderSubtitle1</h2>
+                            <a href="@Model.SliderRedirectUrl1" class="primary-btn">DISCOVER MORE</a>
+*@                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+@*        <div class="hero__items set-bg" data-setbg="@Model.SliderImageUrl2">
+*@            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="hero__text">
+@*                            <span>@Model.SliderTitle2</span>
+                            <h2>@Model.SliderSubtitle2</h2>
+                            <a href="@Model.SliderRedirectUrl2" class="primary-btn">DISCOVER MORE</a>
+*@                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+@*        <div class="hero__items set-bg" data-setbg="@Model.SliderImageUrl3">
+*@            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="hero__text">
+@*                            <span>@Model.SliderTitle3</span>
+                            <h2>@Model.SliderSubtitle3</h2>
+                            <a href="@Model.SliderRedirectUrl3" class="primary-btn">DISCOVER MORE</a>
+*@                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Hero Section End -->
+<!-- About Section Begin -->
+<section class="home-about spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="home__about__pic">
+@*                    <div class="home__about__pic__item large-item set-bg" data-setbg="@Model.AboutImageUrl1"></div>
+                    <div class="home__about__pic__item">
+                        <div class="home__about__pic__item__inner set-bg" data-setbg="@Model.AboutImageUrl2"></div>
+                        <div class="home__about__pic__item__inner set-bg" data-setbg="@Model.AboutImageUrl3"></div>
+*@                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="home__about__text">
+                    <div class="section-title">
+                        <img src="img/icon.png" alt="">
+@*                        <h2>@Model.AboutTitle</h2>
+*@                    </div>
+@*                    @Html.Raw(Model.AboutDescription)
+                    <a href="@Model.AboutRedirectUrl" class="primary-btn">MORE ABOUT US</a>
+*@                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Section End -->

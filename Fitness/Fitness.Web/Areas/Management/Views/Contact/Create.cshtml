@@ -1,0 +1,59 @@
+﻿@using GymApp.Web.Models
+@model Contact
+
+<div class="row">
+	<div class="col-12">
+		<div class="card border-top border-0 border-4 border-dark">
+			<div class="card-body p-5">
+				<div class="card-title text-center">
+					<i class="bx bxs-user-circle text-dark font-50"></i>
+					<h5 class="mb-5 mt-2 text-dark">User Login</h5>
+				</div>
+				<hr>
+				<form class="row g-3" method="post">
+					<div class="col-12">
+						<label asp-for="ImageUrl" class="form-label">Görsel Url</label>
+						<input type="text" class="form-control border-start-0" asp-for="ImageUrl" placeholder="Başlık">
+						<span class="text-danger" asp-validation-for="ImageUrl"></span>
+					</div>
+					<div class="col-12">
+						<label asp-for="Title" class="form-label">Email</label>
+						<input type="text" class="form-control border-start-0" asp-for="Title" placeholder="Başlık">
+						<span class="text-danger" asp-validation-for="Title"></span>
+					</div>
+					<div class="col-12">
+						<label asp-for="Description" class="form-label">Açıklama</label>
+						<input type="text" class="form-control border-start-0" asp-for="Description" placeholder="Açıklama">
+						<span class="text-danger" asp-validation-for="Description"></span>
+					</div>
+					<div class="col-12">
+						<label asp-for="InstagramRedirectUrl" class="form-label">Instagram</label>
+						<input type="text" class="form-control border-start-0" asp-for="InstagramRedirectUrl" placeholder="Instagram">
+						<span class="text-danger" asp-validation-for="InstagramRedirectUrl"></span>
+					</div>
+					<div class="col-12">
+						<label asp-for="LinkedinRedirectUrl" class="form-label">Linkedin</label>
+						<input type="text" class="form-control border-start-0" asp-for="LinkedinRedirectUrl" placeholder="Linkedin">
+						<span class="text-danger" asp-validation-for="LinkedinRedirectUrl"></span>
+					</div>
+					<div class="col-12">
+						<label asp-for="XRedirectUrl" class="form-label">X</label>
+						<input type="text" class="form-control border-start-0" asp-for="XRedirectUrl" placeholder="X">
+						<span class="text-danger" asp-validation-for="XRedirectUrl"></span>
+					</div>
+					
+
+					<div class="col-12">
+						<div class="d-grid">
+							<button type="submit" class="btn btn-dark btn-lg px-5"><i class="bx bxs-lock-open"></i>Kaydet</button>
+						</div>
+					</div>
+					<hr>
+
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,55 @@
+﻿<header class="header">
+    <div class="header__top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="~/img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-9">
+                    <div class="header__top__widget">
+                        <ul>
+                            <li>CALL US: + 1 800-567-8990</li>
+                            <li>WRITE US: OFFICE@EXAMPLE.COM</li>
+                            <li>OPENING TIMES: MON - FRI: 9:00 - 19:00</li>
+                        </ul>
+                        <a href="#" class="primary-btn">JOIN US</a>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </div>
+    <div class="header__nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-9">
+                    <nav class="header__menu">
+                        <ul>
+                            <li class="active"><a asp-controller="Home" asp-action="Index">Anasayfa</a></li>
+                            <li><a asp-controller="Home" asp-action="About">Hakkımızda</a></li>
+                            <li><a asp-controller="Lecture" asp-action="Index">Kurslar</a></li>
+                            <li><a asp-controller="Lecture" asp-action="Trainer">Eğitmenler</a></li>
+                            <li><a asp-controller="Home" asp-action="Contact">İletişim</a></li>
+                            <li><a asp-controller="Member" asp-action="Index">Üyelik</a></li>
+                            <li><a asp-controller="Member" asp-action="Pricing">Paketler</a></li>
+                            <li><a asp-area="Management" asp-controller="Dashboard" asp-action="Index">Panel</a></li>
+                            <li><a asp-area asp-controller="ContactMessage" asp-action="Index">Mesaj</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

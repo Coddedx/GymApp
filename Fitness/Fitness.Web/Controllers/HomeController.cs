@@ -16,6 +16,8 @@ namespace Fitness.Web.Controllers
             _logger = logger;
         }
 
+        //bu bir yorumdur
+
         public IActionResult Index() //if we want to return to another page we should use ıactionresult (return view ile bir yerlere yönlendiriyoruz) gerek yoksa void kullanıyoruz zaten
                                      //IActionResult bir arayüzdür, dönüş olarak özel bir yanıt oluşturabiliriz, ActionResult'u kullandığınızda bir Görünümü veya kaynağı döndürmek için yalnızca önceden tanımlanmış olanları döndürebilirsiniz. IActionResult ile bir yanıt veya hata da döndürebiliriz. Öte yandan, ActionResult soyut bir sınıftır ve miras alan özel bir sınıf oluşturmanız gerekir.
         {

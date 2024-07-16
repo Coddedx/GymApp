@@ -1,2 +1,1 @@
-# GymApp
-Piksel Akademi
+
